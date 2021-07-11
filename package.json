@@ -1,0 +1,14 @@
+{
+  "name": "@liuxsdev/tieba_sign",
+  "version": "0.1.1",
+  "description": "tieba sign function for nodejs",
+  "main": "index.js",
+  "repository": "https://github.com/liuxsdev/tieba_sign.git",
+  "author": "liuxsdev",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {}
+}
