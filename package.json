@@ -1,6 +1,6 @@
 {
   "name": "@liuxsdev/tieba_sign",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "tieba sign function for nodejs",
   "main": "index.js",
   "type": "module",
