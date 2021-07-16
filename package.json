@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "tieba sign function for nodejs",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/liuxsdev/tieba_sign.git",
   "author": "liuxsdev",
   "license": "MIT",
