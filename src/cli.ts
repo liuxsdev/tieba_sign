@@ -67,24 +67,26 @@ async function get_favs_and_fid(BDUSS: string) {
   }
 }
 
-async function sign_kw(bduss: string, tbs: string, kw: string, fid: number) {
+async function sign_kw(bduss: string, kw: string, fid: number) {
   let msg = "";
   let isOK = false;
   try {
-    const res = await sign(bduss, tbs, kw, fid);
-    if (res.error_code === "0") {
+    const res = await sign(bduss, kw, fid);
+    // console.log(res);
+    if (res.error_code == "0") {
       msg = "👌 签到成功";
       isOK = true;
-    } else if (res.error_code === "160002") {
+    } else if (res.error_code == "160002") {
       msg = "👌 已经签过";
       isOK = true;
     } else {
-      msg = "❌ 签到失败";
+      // 110001:未知错误
+      msg = `❌ 签到失败[${res.error_msg}]`;
     }
   } catch (err) {
     msg = `❌ 签到失败 ${err}`;
   }
-  console.log(`签到 ${kw} 吧\t\t ${msg}`);
+  console.log(`${msg}: ${kw}`);
   return isOK;
 }
 
@@ -99,17 +101,13 @@ async function main() {
   console.log(`共需签到${favs.length}个贴吧`);
 
   // 开始签到
-
-  // 获取tbs
   console.time("签到用时");
-  const tbs = await get_tbs(BDUSS);
-
-  const tasks = favs.map((item) => sign_kw(BDUSS, tbs, item.kw, item.fid));
+  const tasks = favs.map((item) => sign_kw(BDUSS, item.kw, item.fid));
   const res = await Promise.all(tasks);
   const trueCount = res.reduce((count, currentValue) => {
     return count + (currentValue === true ? 1 : 0);
   }, 0);
-  console.log(`签到成功 ${trueCount}`);
+  console.log(`签到成功: ${trueCount}/${favs.length} 失败: ${favs.length - trueCount}`);
   console.timeEnd("签到用时");
 }
 

@@ -1,22 +1,25 @@
 {
   "name": "@liuxsdev/tieba_sign",
-  "version": "0.1.3",
-  "description": "tieba sign function for nodejs",
+  "version": "0.2.0",
+  "description": "贴吧签到",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "bin": {
+    "tieba_sign": "dist/cli.js"
+  },
   "repository": "https://github.com/liuxsdev/tieba_sign.git",
   "author": "liuxsdev",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build": "tsup",
-    "tieba": "tsup & node dist/cli.js"
+    "sign": "tsup & node dist/cli.js"
   },
   "dependencies": {
     "@inquirer/password": "^1.1.5",
-    "axios": "^1.2.2",
-    "cheerio": "^1.0.0-rc.10"
+    "axios": "^1.4.0",
+    "cheerio": "1.0.0-rc.12"
   },
   "devDependencies": {
     "@types/node": "^20.4.5",

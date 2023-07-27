@@ -9,6 +9,15 @@ interface SignPostData {
   tbs: string;
 }
 
+interface FavInfo {
+  id: string;
+  kw: string;
+  level: string;
+  exp: string;
+}
+
+type FavInfoArray = FavInfo[];
+
 async function get_tbs(BDUSS: string) {
   let url = "http://tieba.baidu.com/dc/common/tbs";
   let response = await axios.get(url, {
@@ -35,10 +44,10 @@ function encode_data(data: SignPostData) {
   return data;
 }
 
-async function sign(BDUSS: string, kw: string, tbs: string, fid: number) {
-  let url = "http://c.tieba.baidu.com/c/c/forum/sign";
-  let headers = { Cookie: `BDUSS=${BDUSS}` };
-  // let tbs = await get_tbs(BDUSS);
+async function sign(BDUSS: string, kw: string, fid: number) {
+  const url = "http://c.tieba.baidu.com/c/c/forum/sign";
+  const headers = { Cookie: `BDUSS=${BDUSS}` };
+  const tbs = await get_tbs(BDUSS);
   // let fid = await get_fid(kw);
   let data = { BDUSS, kw, fid, tbs };
   data = encode_data(data);
@@ -47,7 +56,7 @@ async function sign(BDUSS: string, kw: string, tbs: string, fid: number) {
   return response["data"];
 }
 
-async function get_favs(BDUSS: string) {
+async function get_favs(BDUSS: string): Promise<FavInfoArray> {
   // 获取关注的贴吧
   const url =
     "http://tieba.baidu.com/mo/q---B8D06B9EB00241F919F47789D4FD3103%3AFG%3D1--1-1-0--2--wapp_1385540291997_626/m?tn=bdFBW&tab=favorite";
