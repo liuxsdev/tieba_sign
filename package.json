@@ -12,6 +12,9 @@
   "author": "liuxsdev",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "sign": "tsup & node dist/cli.js"
