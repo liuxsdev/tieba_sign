@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "lib": ["ESNext"],
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "removeComments": true //删除注释
+    }
+}
