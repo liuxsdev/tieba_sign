@@ -1,4 +1,4 @@
-name: Release
+name: publish
 
 on:
   push:
@@ -38,5 +38,5 @@ jobs:
 
       - name: Publish to NPM
         env:
-          NPM_TOKEN: ${{secrets.npm_token}}
-        run: pnpm publish
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+        run: npm publish
