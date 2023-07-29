@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: "Release version"
+        required: true
 
 jobs:
   publish:
@@ -22,7 +28,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
           run_install: false
 
       - name: Build Javascript
