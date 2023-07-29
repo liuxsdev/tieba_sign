@@ -31,12 +31,12 @@ jobs:
           version: 8
           run_install: false
 
-      - name: Build Javascript
+      - name: Build Packages
         run: |
           pnpm install
           pnpm build
 
       - name: Publish to NPM
         env:
-          NPM_TOKEN: ${{secrets.npm_token}}
+          NPM_TOKEN: ${{ secrets.npm_token }}
         run: npm publish
