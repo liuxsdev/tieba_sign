@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "sign": "tsup & node dist/cli.js"
+    "sign": "tsup && node dist/cli.js"
   },
   "dependencies": {
     "@inquirer/password": "^1.1.5",
