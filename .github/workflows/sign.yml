@@ -1,9 +1,8 @@
-name: publish
+name: sign
 
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  schedule:
+    - cron: "0 7 * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,3 +29,5 @@ jobs:
         run: |
           pnpm install
           pnpm sign
+        env:
+          BDUSS: ${{ secrets.BDUSS }}
