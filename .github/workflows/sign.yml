@@ -5,15 +5,10 @@ on:
     tags:
       - "v*.*.*"
   workflow_dispatch:
-    inputs:
-      version:
-        type: string
-        description: "Release version"
-        required: true
 
 jobs:
-  publish:
-    name: publish
+  sign:
+    name: sign
     runs-on: ubuntu-latest
 
     steps:
@@ -31,13 +26,7 @@ jobs:
           version: 8
           run_install: false
 
-      - name: Build Packages
+      - name: Build Packages And Sign
         run: |
           pnpm install
-          pnpm build
-
-      - name: Publish to NPM
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish
+          pnpm sign
