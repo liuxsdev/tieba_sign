@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@inquirer/password':
     specifier: ^1.1.5
-    version: 1.1.6
+    version: 1.1.7
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -226,8 +226,8 @@ packages:
     dev: true
     optional: true
 
-  /@inquirer/core@3.1.0:
-    resolution: {integrity: sha512-l+vA7cbkVnEnrV1zCStw9//4mrmJNTziE67C9vQA3ccyTeGx+o0APnFmXo1AMSf7r9N7+gom9KdSjk7v4bg2Wg==}
+  /@inquirer/core@3.1.1:
+    resolution: {integrity: sha512-gPvWAiFBre2DJEV7yRT/ZoK2XyJvpTQlCV7F7+lWcejzdUKA1+wTqwa1e8x1LHxkulHc5hKCKZ855UMylE6ifA==}
     engines: {node: '>=14.18.0'}
     dependencies:
       '@inquirer/type': 1.1.1
@@ -237,7 +237,7 @@ packages:
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-spinners: 2.9.0
-      cli-width: 4.0.0
+      cli-width: 4.1.0
       figures: 3.2.0
       mute-stream: 1.0.0
       run-async: 3.0.0
@@ -245,20 +245,20 @@ packages:
       wrap-ansi: 6.2.0
     dev: false
 
-  /@inquirer/input@1.2.6:
-    resolution: {integrity: sha512-zmAAYCEJ7sblT36N3CL7Ugd0Js7hVZwb0BDmCWncTn4I0o+h4t8Kj8pBXh0Kdms2zxitOIBcbZDfFmUkZ5Zs1A==}
+  /@inquirer/input@1.2.7:
+    resolution: {integrity: sha512-h+/nI3eHii6qLKu9Ax/veALCcbeEzhwY0z/x+4DthU4QBU9wOeuXpg7BPq2DFfue73UHgkl50m8wLHqhbGX4XQ==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@inquirer/core': 3.1.0
+      '@inquirer/core': 3.1.1
       '@inquirer/type': 1.1.1
       chalk: 4.1.2
     dev: false
 
-  /@inquirer/password@1.1.6:
-    resolution: {integrity: sha512-HV+7aECu+qT5SQi1PH+5i90ckrUSPqVQ/QWCC3bUYQFh1E/yuQIU479Jw59xldUy+1DxVeqEtBPHpUxNlqUBKw==}
+  /@inquirer/password@1.1.7:
+    resolution: {integrity: sha512-wEPyZWAcrathyfGfHaDzEljZCmLnSxvbve64t0Yl5Idbxj29m9K81Q8AXMSpZUd48z3PEeNxkbUqqCHoCLYA/Q==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@inquirer/input': 1.2.6
+      '@inquirer/input': 1.2.7
       '@inquirer/type': 1.1.1
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -481,8 +481,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /cli-width@4.0.0:
-    resolution: {integrity: sha512-ZksGS2xpa/bYkNzN3BAw1wEjsLV/ZKOf/CCrJ/QOBsxx6fOARIkwTutxp1XIOIohi6HKmOFjMoK/XaqDVUpEEw==}
+  /cli-width@4.1.0:
+    resolution: {integrity: sha512-ouuZd4/dm2Sw5Gmqy6bGyNNNe1qt9RpmxveLSO7KcgsTnU7RXfsw+/bukWGo1abgBiMAic068rclZsO4IWmmxQ==}
     engines: {node: '>= 12'}
     dev: false
 
