@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@inquirer/password':
     specifier: ^1.1.5
-    version: 1.1.7
+    version: 1.1.8
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -226,11 +226,11 @@ packages:
     dev: true
     optional: true
 
-  /@inquirer/core@3.1.1:
-    resolution: {integrity: sha512-gPvWAiFBre2DJEV7yRT/ZoK2XyJvpTQlCV7F7+lWcejzdUKA1+wTqwa1e8x1LHxkulHc5hKCKZ855UMylE6ifA==}
+  /@inquirer/core@3.1.2:
+    resolution: {integrity: sha512-lR2GaqBkp42Ew9BOAOqf2pSp+ymVES1qN8OC90WWh45yeoYLl0Ty1GyCxmkKqBJtq/+Ea1MF12AdFcZcpRNFsw==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@inquirer/type': 1.1.1
+      '@inquirer/type': 1.1.2
       '@types/mute-stream': 0.0.1
       '@types/node': 20.5.0
       '@types/wrap-ansi': 3.0.0
@@ -245,27 +245,27 @@ packages:
       wrap-ansi: 6.2.0
     dev: false
 
-  /@inquirer/input@1.2.7:
-    resolution: {integrity: sha512-h+/nI3eHii6qLKu9Ax/veALCcbeEzhwY0z/x+4DthU4QBU9wOeuXpg7BPq2DFfue73UHgkl50m8wLHqhbGX4XQ==}
+  /@inquirer/input@1.2.8:
+    resolution: {integrity: sha512-4rJdzqlf7yf01jFrLtkehNPD7E4S2IDvfYWMK2s+FJrZU6iihC0q3QpjOSBP+O/EhNjYBqHvAW3JDA1CZ8gc3A==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@inquirer/core': 3.1.1
-      '@inquirer/type': 1.1.1
+      '@inquirer/core': 3.1.2
+      '@inquirer/type': 1.1.2
       chalk: 4.1.2
     dev: false
 
-  /@inquirer/password@1.1.7:
-    resolution: {integrity: sha512-wEPyZWAcrathyfGfHaDzEljZCmLnSxvbve64t0Yl5Idbxj29m9K81Q8AXMSpZUd48z3PEeNxkbUqqCHoCLYA/Q==}
+  /@inquirer/password@1.1.8:
+    resolution: {integrity: sha512-iIvhUmZh2kC16B24lpBlUPsk1Nb/dI6DbXuUiOpbdrz+Lz2PLQI54k5Gs0w65W5kbJew/I7aaiWYPFW4zD37Lw==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@inquirer/input': 1.2.7
-      '@inquirer/type': 1.1.1
+      '@inquirer/input': 1.2.8
+      '@inquirer/type': 1.1.2
       ansi-escapes: 4.3.2
       chalk: 4.1.2
     dev: false
 
-  /@inquirer/type@1.1.1:
-    resolution: {integrity: sha512-ACc2N1AnIYtg+bfnitna0OJ1rptWqa8apdDDRQnRWb0R5MEPGAgvqWaDbZahATXOnglqKDRIeHFEQfqxhM6p/g==}
+  /@inquirer/type@1.1.2:
+    resolution: {integrity: sha512-lowHTIBAE/bltg7/EchMDLfKUdT0BCyS2xzqgjsyKADybz2QZ0cLWtDXzjT1C6rdZI07Ng9jU4d2R9rDoU+6Hw==}
     engines: {node: '>=14.18.0'}
     dev: false
 
