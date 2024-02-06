@@ -20,7 +20,7 @@
     "sign": "tsup && node dist/cli.js"
   },
   "dependencies": {
-    "@inquirer/password": "^1.1.8",
+    "@inquirer/password": "^2.0.0",
     "axios": "^1.4.0",
     "cheerio": "1.0.0-rc.12"
   },
